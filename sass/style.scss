@@ -1,0 +1,145 @@
+/* Estilo de mi pagina principal */
+$body-font-family: sans-serif;
+$body-bg-color: #f4f4f4;
+$body-text-color: #333;
+$header-bg-color: #333;
+$header-text-color: #fff;
+$section-bg-color: #ffffff;
+$section-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$text-underline: underline;
+$text-xlarge: x-large;
+$text-large: large;
+$image-width-default: 200px;
+$image-height-default: 200px;
+$image-width-list: 250px;
+$image-height-list: 250px;
+$spacing-small: 5px;
+$spacing-medium: 10px;
+$spacing-large: 20px;
+
+@import 'body';
+@import 'header';
+
+
+footer {
+  background-color: $header-bg-color;
+  color: $header-text-color;
+  text-align: center;
+  padding: 1em 0;
+  position: static;
+  width: 100%;
+  bottom: 0;
+}
+
+th,
+td {
+  border: none;
+  padding: $spacing-medium * 3; /* 15px */
+  text-align: left;
+  font-size: $text-xlarge;
+  background-color: $header-bg-color;
+  color: $header-text-color;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: $header-bg-color;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.imagen-con-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: $image-width-list;
+    height: $image-height-list;
+    margin-bottom: $spacing-medium;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: $spacing-small;
+  }
+}
+
+/* Para pantallas más pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+  body {
+      font-size: 14px;
+  }
+
+  /* Ajustar el tamaño del banner para móviles */
+  body img {
+      height: auto; /* Permitir que la altura se ajuste */
+  }
+
+  div p {
+      font-size: large; /* Reducir el tamaño del texto */
+  }
+
+  .imagen-con-descripcion {
+      flex-direction: column; /* Apilar imagen y texto */
+      align-items: center; /* Centrar elementos */
+      text-align: center; /* Centrar texto */
+  }
+
+  .imagen-con-descripcion img {
+      width: 100%; /* Imagen ocupa todo el ancho */
+      height: auto;
+      margin-right: 0; /* Eliminar margen */
+      margin-bottom: 10px; /* Agregar margen abajo */
+  }
+
+  th,
+  td {
+      font-size: medium; /* Reducir tamaño del texto */
+      padding: 10px;
+  }
+
+  .contenedor-imagenes {
+      flex-direction: column; /* Apilar las imágenes */
+      align-items: center;
+  }
+
+  .imagen-con-lista img {
+      width: 100%; /* Imagen ocupa todo el ancho */
+      height: auto;
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+      font-size: 16px;
+  }
+
+  /* Ajustar el tamaño del banner para tabletas (opcional) */
+  body img {
+      height: auto;
+  }
+
+  .imagen-con-descripcion {
+      font-size: 18px;
+  }
+
+  th,
+  td {
+      font-size: large;
+      padding: 12px;
+  }
+}

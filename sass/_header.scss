@@ -1,0 +1,44 @@
+header {
+    background-color: $header-bg-color;
+    color: $header-text-color;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  div {
+    p {
+      text-decoration: $text-underline;
+      font-size: $text-xlarge;
+      text-align: center;
+  
+      div {
+        p {
+          text-align: center;
+          font-size: $text-large;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+    }
+  }
+  
+  section {
+    padding: 2em;
+    max-width: 90%;
+    margin: 2em auto;
+    background-color: $section-bg-color;
+    box-shadow: 0 0 $spacing-medium $section-box-shadow;
+  }
+  
+  .imagen-con-descripcion {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $spacing-large;
+    font-size: 20px;
+  
+    img {
+      width: $image-width-default;
+      height: $image-height-default;
+      margin-right: $spacing-large;
+    }
+  }
+  
